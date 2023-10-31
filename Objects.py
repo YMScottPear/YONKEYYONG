@@ -455,7 +455,7 @@ class Enemy_Pumpkin:
             self.dir_right = 1
 
     def can_descend(self, ladder: Ladder):
-        temp = pygame.rect.Rect(self.rect.x + 13, self.rect.y + 26, 2, 4)
+        temp = pygame.rect.Rect(self.rect.x + 10, self.rect.y + 26, 2, 4)
         if temp.colliderect(ladder.rect):
             roll = randint(0, 8)
             if roll == 0:
