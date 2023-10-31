@@ -284,7 +284,6 @@ def game_win_seq():
 
         if game_win_timer > 48:
             game_state = 'level_intro'
-            highscore = update_highscore(current_score, highscore)
             Curr_Level += 1
             game_win_trigger = 0
             game_win_timer = 0
@@ -293,6 +292,7 @@ def game_win_seq():
             rolling_pumpkins.clear()
             fall_pumpkins.clear()
             current_score += 5000
+            highscore = update_highscore(current_score, highscore)
 
 
 # -----------------------------
@@ -361,7 +361,7 @@ def game_over_seq():
     window.blit(game_over_text, (120, 100))
     window.blit(score_txt_go, (100, 160))
     if current_score >= highscore:
-        window.blit(new_high_score, (100, 200))
+        window.blit(new_high_score, (85, 200))
 
     if game_over_timer > 5:
         # make actual intro
