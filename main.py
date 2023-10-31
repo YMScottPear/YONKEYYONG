@@ -444,9 +444,10 @@ yonkey_taunts = [yonkey_taunt1, yonkey_taunt2]
 
 
 def level_intro():
-    global game_state, level_intro_timer, hs_text, score_text, lvl_text, live_text
+    global game_state, level_intro_timer, hs_text, score_text, lvl_text, live_text, current_score, highscore
 
     if level_intro_timer == 0:
+        highscore = update_highscore(current_score, highscore)
         hs = f"{highscore:08d}"
         hs_text = sec_font_medium.render(f"HighScore {hs}", False, (168, 43, 43))
         st = f"{current_score:08d}"
