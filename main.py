@@ -50,6 +50,7 @@ Curr_Level = 1
 
 current_goal = Goal(-100, -100)
 
+#
 # Score variables
 current_score = 0
 current_score_str = f"{current_score:08d}"
